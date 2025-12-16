@@ -1,0 +1,180 @@
+{
+  "info": {
+    "_postman_id": "d2ca193b-0b77-41c2-805e-956c75dbb6b9",
+    "name": "New Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Account",
+      "id": "fbe8bf6b-5972-4bb6-ace0-72b4d29b89b0",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"user_id\": \"user_1\",\r\n  \"account_type\": \"savings\",\r\n  \"currency\": \"INR\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/accounts",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "accounts"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Account",
+      "id": "a4ffccef-54c5-4419-960c-5897710078c9",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"user_id\": \"user_1\",\r\n  \"account_type\": \"savings\",\r\n  \"currency\": \"INR\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/accounts/5e7a955f-b4e3-42bc-a51f-d1a5c8ea3264",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "accounts",
+            "5e7a955f-b4e3-42bc-a51f-d1a5c8ea3264"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Deposit",
+      "id": "6cb77b84-0bc6-423b-8da3-c89ac2eefc09",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"account_id\": \"22c70ea3-75c9-414f-a1c8-52db585b0d14\",\r\n  \"amount\": 1000,\r\n  \"currency\": \"INR\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/deposits",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "deposits"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "withdraw",
+      "id": "5e96cbeb-2c78-4425-a6a1-01fdece7ef76",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"account_id\": \"22c70ea3-75c9-414f-a1c8-52db585b0d14\",\r\n  \"amount\": 200,\r\n  \"currency\": \"INR\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/withdrawals",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "withdrawals"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Transfer",
+      "id": "4848681a-e7c1-4fd4-809b-7dc7ef83260c",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"source_account_id\": \"22c70ea3-75c9-414f-a1c8-52db585b0d14\",\r\n  \"destination_account_id\": \"5e7a955f-b4e3-42bc-a51f-d1a5c8ea3264\",\r\n  \"amount\": 300,\r\n  \"currency\": \"INR\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/transfers",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "transfers"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Ledger History",
+      "id": "0f6ff87f-39b9-4815-8d58-4b175b10032c",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/accounts/22c70ea3-75c9-414f-a1c8-52db585b0d14/ledger",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "accounts",
+            "22c70ea3-75c9-414f-a1c8-52db585b0d14",
+            "ledger"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
