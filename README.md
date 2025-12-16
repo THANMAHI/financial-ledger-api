@@ -41,7 +41,7 @@ src/config/db/js
 node src/server.js
 
 Server will run on:
-http://localhost:30000
+http://localhost:3000
 
 
 ## API Endpoints
@@ -113,7 +113,16 @@ The database schema consists of three core tables:
 
 - ledger_entries
 
-See the ER diagram below : docs/erd.png
+## Database Schema
+
+### ER Diagram
+
+![ER Diagram](docs/erd.png)
+
+## Postman Collection for API Testing
+
+Import the following file in Postman:
+
 
 ### Immutability
 
